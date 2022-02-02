@@ -17,16 +17,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKU-Tt-xRd">
-                                <rect key="frame" x="178" y="431" width="58" height="34"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="178" y="436" width="58" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="contentStretch" x="0.55000000000000004" y="0.75" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Record">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8D-8a-RfA"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pitch Perfect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4q-2q-wm4">
-                                <rect key="frame" x="158" y="257" width="99" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-z6-uu1">
+                                <rect key="frame" x="154" y="478" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-RC-C99">
+                                <rect key="frame" x="148" y="499" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,13 +45,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="u4q-2q-wm4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7V4-8t-JDd"/>
-                            <constraint firstItem="WKU-Tt-xRd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TM6-Q4-RNV"/>
-                            <constraint firstItem="WKU-Tt-xRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uzm-KZ-7VK"/>
-                            <constraint firstItem="u4q-2q-wm4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pbZ-v0-ZnQ"/>
-                            <constraint firstItem="u4q-2q-wm4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tlb-9p-r26"/>
+                            <constraint firstItem="iBU-z6-uu1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="83c-Pw-bek"/>
+                            <constraint firstItem="WKU-Tt-xRd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CMM-xU-iZq"/>
+                            <constraint firstItem="WKU-Tt-xRd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GpH-Ac-h0O"/>
+                            <constraint firstItem="iBU-z6-uu1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O4F-Q2-sw1"/>
+                            <constraint firstItem="y4o-RC-C99" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VyY-Vt-mEV"/>
+                            <constraint firstItem="y4o-RC-C99" firstAttribute="top" secondItem="iBU-z6-uu1" secondAttribute="bottom" id="mSB-X5-qgn"/>
+                            <constraint firstItem="iBU-z6-uu1" firstAttribute="top" secondItem="WKU-Tt-xRd" secondAttribute="bottom" constant="8" id="uWs-gA-7aG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="iBU-z6-uu1" id="oEN-RR-g5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
